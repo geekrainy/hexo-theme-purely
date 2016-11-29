@@ -1,0 +1,21 @@
+<header id="header" class="clearfix">
+	<h1><a id="logo" href="<?php $this->options->siteUrl(); ?>" title="Rainy的博客"><%= config.title %></a></h1>
+	<p class="description"><%= theme.subtitle %></p>
+	<nav id="nav-menu" class="clearfix">
+		<h2 class="outline">Main Menu</h2>
+		<form id="search" method="post" action="./" role="search">
+		<input id="search-input" type="text" name="s" class="inputbox" value="Search" onfocus="if (value =='Search'){value =''}" onblur="if (value ==''){value='Search'}">
+		</form>
+		<ul>
+			// <li><a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('HOME'); ?></a></li>
+			// <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+			// <?php while($pages->next()): ?>
+			// <li><a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
+			// <?php endwhile; ?>
+
+      <% for (var i in theme.menu){ %>
+        <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+      <% } %>
+		</ul>
+	</nav>
+</header>

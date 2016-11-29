@@ -1,0 +1,32 @@
+<h2 class="outline">Article Content</h2>
+  <article class="postin">
+    <h3 class="post-title"><a href="<%- url_for(post.link) %>"><%= post.title %></a></h3>
+    <ul class="post-meta">
+      <li><%= config.author %></li>
+      <li><%= date(post.date, date_format) %></li>
+      <li><%- list_categories(post.categories, {
+      show_count: false,
+      class: 'article-category',
+      style: 'none',
+      separator: '►'
+    }) %></li>
+    </ul>
+    <div class="post-content">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+    <p class="tags"><% if (post.tags && post.tags.length){ %>
+  <%- list_tags(post.tags, {
+    show_count: false,
+    class: 'article-tag'
+  }) %>
+<% } %></p>
+  </article>
