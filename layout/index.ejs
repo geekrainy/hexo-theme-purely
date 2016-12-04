@@ -1,16 +1,14 @@
 <h2 class="outline">Article List</h2>
-
 <% page.posts.each(function(post){ %>
-    <%- partial('article', {post: post, index: true}) %>
-    <article class="post">
+  <%- partial('article', {post: post, index: true}) %>
+  <article class="post">
     <a href="<%- url_for(post.link) %>">
-    <h3><%= post.title %></h3>
-    <div class="pocontent"><%- post.content %></div>
-  </a>
+      <h3><%= post.title %></h3>
+      <div class="pocontent"><%- post.content %></div>
+    </a>
   </article>
-  <% }) %>
-
-  <% if (page.total > 1){ %>
+<% }) %>
+<% if (page.total > 1){ %>
   <ol class="page-navigator">
     <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
     <%- paginator({

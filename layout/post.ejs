@@ -1,1 +1,26 @@
-<%- partial('_partial/article', {post: page, index: false}) %>
+<h2 class="outline">Article Content</h2>
+  <article class="postin">
+    <h3 class="post-title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
+    <ul class="post-meta">
+      <li><%= date(post.date, date_format) %></li>
+      <li>
+        <%- list_categories(post.categories, {
+          show_count: false,
+          class: 'article-category',
+          style: 'none',
+          separator: '►'
+        }) %>
+      </li>
+    </ul>
+    <div class="post-content">
+      <%- post.content %>
+    </div>
+    <% if (post.tags && post.tags.length){ %>
+    <p class="tags">
+      <%- list_tags(post.tags, {
+        show_count: false,
+        class: 'article-tag'
+      }) %>
+    </p>
+    <% } %>
+  </article>
