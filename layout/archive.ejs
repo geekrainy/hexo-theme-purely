@@ -1,1 +1,33 @@
-<%- partial('_partial/archive', {pagination: config.archive, index: true}) %>
+<h2 class="outline">Archive</h2>
+  <% 
+      var years = {}, months = {};
+      site.posts.sort('date').reverse().forEach(function(post){
+          var year = post.date.year(), month = post.date.month();
+          if(years[year]===undefined){
+              years[year] = [];
+          }
+          if(months[month]===undefined){
+            months[month] = [];
+          }
+          years[year].push(month);
+          months[month].push(post);
+      });
+  %>
+  <% Object.keys(years).reverse().forEach(function(year){  %>
+  <article class="postin">
+    <div id="archives">
+      <h3 class="al_year"><%= year %></h3>
+      <% Object.keys(months).reverse().forEach(function(month){  %>
+        <ul class="al_mon_list">
+          <li clsss="li_mon"><span class="al_mon"><%= month %></span>
+              <ul class="al_post_list">
+                <% months[month].map(function(post){  %>
+                  <li><a href="<%- config.root %><%- post.path %>"><%- post.title || "Untitled" %></a><em>(0)</em></li>
+                <% }) %>
+              </ul>
+          </li>
+        </ul>
+      <% }) %>
+    </div>
+  </article>
+  <% }) %>
