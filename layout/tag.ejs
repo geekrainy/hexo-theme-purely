@@ -4,7 +4,7 @@
     <h3 class="post-title"><a href="<%- url_for(post.link) %>"><%= post.title %></a></h3>
     <ul class="post-meta">
       <li><%= config.author %></li>
-      <li><%= date(post.date, date_format) %></li>
+      <li><%= date(post.date, 'MMM D') %></li>
       <li><%- list_categories(post.categories, {
       show_count: false,
       class: 'article-category',
