@@ -2,31 +2,21 @@
   <article class="postin">
     <h3 class="post-title"><a href="<%- url_for(page.link) %>"><%= page.title %></a></h3>
     <ul class="post-meta">
-      <li><%= config.author %></li>
-      <li><%= date(page.date, 'MMM D') %></li>
-      <li><%- list_categories(page.categories, {
+      <li><%= __('作者: ') %><%= config.author %></li>
+      <li><%= __('日期: ') %><%= date(page.date, 'MMM D') %></li>
+      <li><%= __('分类: ') %><%- list_categories(page.categories, {
       show_count: false,
       class: 'article-category',
       style: 'none',
-      separator: '►'
+      separator: ' > '
     }) %></li>
     </ul>
     <div class="post-content">
-      <% if (page.excerpt && index){ %>
-        <%- page.excerpt %>
-        <% if (theme.excerpt_link){ %>
-          <p class="article-more-link">
-            <a href="<%- url_for(page.path) %>#more"><%= theme.excerpt_link %></a>
-          </p>
-        <% } %>
-      <% } else { %>
         <%- page.content %>
-      <% } %>
     </div>
-    <p class="tags"><% if (page.tags && page.tags.length){ %>
-  <%- list_tags(page.tags, {
-    show_count: false,
-    class: 'article-tag'
-  }) %>
-<% } %></p>
+    <p class="tags">
+    <% if (page.tags && page.tags.length) { %>
+    
+    <% } %>
+    </p>
   </article>

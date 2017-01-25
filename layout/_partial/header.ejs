@@ -1,6 +1,8 @@
 <header id="header" class="clearfix">
 	<h1><a id="logo" href="<?php $this->options->siteUrl(); ?>" title="Rainy的博客"><%= config.title %></a></h1>
-	<p class="description"><%= theme.subtitle %></p>
+	<% if (theme.subtitle) { %>
+		<p class="description"><%= theme.subtitle %></p>
+	<% } %>
 	<nav id="nav-menu" class="clearfix">
 		<h2 class="outline">Main Menu</h2>
 		<form id="search" method="post" action="./" role="search">
