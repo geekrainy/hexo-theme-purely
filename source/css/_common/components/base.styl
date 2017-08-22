@@ -1,8 +1,5 @@
 /* 全局 */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
-	margin:0;
-	padding:0;
-}
+
 .clearfix {
 	zoom:1;
 }
@@ -24,9 +21,6 @@ a:hover,a:active {
 a:focus {
 	outline:none;
 }
-h1,h2,h3,h4,h5,h6 {
-	font-size:18px;
-}
 img {
 	border:0;
 }
@@ -42,22 +36,17 @@ img {
 .post-content {
 	line-height:150%;
 	margin:10px 0;
-}
-.post-content p {
+	p {
 	margin:1em 0;
 	letter-spacing:1px;
 }
-.post-content h1 {
+
+h1 {
 	font-size:26px;
   margin: 1em 0;
 }
-#wrapper .post-content h2 {
-	display:block;
-	font-size:24px;
-	margin: 1em 0;
-}
-.post-content {
-	h3 {
+
+h3 {
 		font-size: 22px;
 		margin: 1em 0;
 	}
@@ -75,13 +64,12 @@ img {
 		font-size: 16px;
 		margin: .5em 0;
 	}
-}
 
-.post-content figure {
+	figure {
 	margin: 0;
 }
 
-.post-content a {
+ a {
 	color:#C10D0C;
 }
 blockquote {
@@ -90,14 +78,14 @@ blockquote {
 	padding-left:1em;
 	border-left:1px solid #C10D0C;
 }
-.post-content ul {
+ ul {
 	padding:.5em 2em!important;
 	list-style-type: square;
 }
-.post-content ol {
+ ol {
 	padding:.5em 2em!important;
 }
-.post-content dt {
+ dt {
 	font-weight: bold;
 }
 pre,code {
@@ -117,14 +105,26 @@ pre {
 pre code {
 	color:#444;
 }
-.post-content img {
+
+img {
 	max-width:618px;
 	border:1px solid rgb(224,224,224);
 	padding:2px;
 }
-.post-content img:hover {
+img:hover {
 	border-color:#C10D0C;
 }
+}
+
+#wrapper .post-content h2 {
+	display:block;
+	font-size:24px;
+	margin: 1em 0;
+}
+
+
+
+
 /* 内容区结束 */
 
 /* 结构 */
