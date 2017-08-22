@@ -21,6 +21,8 @@ a:hover,a:active {
 a:focus {
 	outline:none;
 }
+
+
 img {
 	border:0;
 }
@@ -29,97 +31,6 @@ img {
 	font-style:normal;
 	font-weight:400;
 	src:local('Electrolize'),local('Electrolize-Regular'),url(http://rainy.qiniudn.com/Electrolize.woff) format('woff');
-}
-/* 全局结束 */
-
-/* 内容区markdown */
-.post-content {
-	line-height:150%;
-	margin:10px 0;
-	p {
-	margin:1em 0;
-	letter-spacing:1px;
-}
-
-h1 {
-	font-size:26px;
-  margin: 1em 0;
-}
-
-h3 {
-		font-size: 22px;
-		margin: 1em 0;
-	}
-
-	h4 {
-		font-size: 20px;
-		margin: .5em 0;
-	}
-
-	h5 {
-		font-size: 18px;
-		margin: .5em 0;
-	}
-	h6 {
-		font-size: 16px;
-		margin: .5em 0;
-	}
-
-	figure {
-	margin: 0;
-}
-
- a {
-	color:#C10D0C;
-}
-blockquote {
-	margin:1em 0;
-	margin-left:1.5em;
-	padding-left:1em;
-	border-left:1px solid #C10D0C;
-}
- ul {
-	padding:.5em 2em!important;
-	list-style-type: square;
-}
- ol {
-	padding:.5em 2em!important;
-}
- dt {
-	font-weight: bold;
-}
-pre,code {
-	padding:2px 4px;
-	background:#F3F3F0;
-	font-family:Menlo,Monaco,Consolas,"Lucida Console","Courier New",monospace;
-	font-size:.92857em;
-}
-code {
-	color:#B94A48;
-}
-pre {
-	padding:8px;
-	overflow:auto;
-	max-height:300px;
-}
-pre code {
-	color:#444;
-}
-
-img {
-	max-width:618px;
-	border:1px solid rgb(224,224,224);
-	padding:2px;
-}
-img:hover {
-	border-color:#C10D0C;
-}
-}
-
-#wrapper .post-content h2 {
-	display:block;
-	font-size:24px;
-	margin: 1em 0;
 }
 
 
@@ -148,9 +59,10 @@ body {
 }
 #logo {
 	font:normal 30px 'Electrolize',Verdana;
-}
-#logo:hover {
-	color:#C10D0C;
+
+	&:hover {
+		color:#C10D0C;
+	}
 }
 .description {
 	font-size:14px;
@@ -174,10 +86,12 @@ body {
 	margin-right:30px;
 	padding:10px;
 	font-size:14px;
+
+	&:hover, &:current {
+		border-bottom:2px solid #FF0000;
+	}
 }
-#nav-menu a:hover,#nav-menu a.current {
-	border-bottom:2px solid #FF0000;
-}
+
 #search {
 	float:right;
 	padding-top:18px;
@@ -211,28 +125,36 @@ body {
 	border-left:1px solid #DDD;
 	font-size:14px;
 	line-height:140%;
+
+	&:hover {
+		color: #222;
+		border-color: #FF0000;
+
+		& a {
+			color: #222;
+		}
+	}
+
+	a {
+		color: #333;
+	}
+
+	h3 {
+		color:#C10D0C;
+		display:block;
+		padding:3px 0 3px 8px;
+		border-bottom:1px solid #DDD;
+		font-size:16px;
+		font-weight:normal;
+
+		&::first-child {
+			border-color: #FF0000;
+		}
+	}
+
 }
-.post a {
-	color:#333;
-}
-.post:hover {
-	color:#222;
-	border-color:#FF0000;
-}
-.post:hover a {
-	color:#222;
-}
-.post h3 {
-	color:#C10D0C;
-	display:block;
-	padding:3px 0 3px 8px;
-	border-bottom:1px solid #DDD;
-	font-size:16px;
-	font-weight:normal;
-}
-.post:hover h3:first-child {
-	border-color:#FF0000;
-}
+
+
 .post-meta {
 	color:rgb(0,0,0);
 	list-style:none;
@@ -257,233 +179,57 @@ body {
 	border-top:1px solid #E0E0E0;
 	list-style:none;
 	font-size:16px;
+
+	li {
+		display:inline-block;
+		margin:0 5px 5px 0;
+	}
+
+	a {
+	  display:inline-block;
+		height:20px;
+		border-top:2px solid #FFFFFF;
+		padding:5px 9px;
+		line-height:20px;
+
+		&:hover {
+			border-color: #FF0000;
+		}
+	}
+
+	.current a {
+		color:#444;
+		border-top-color:#FF0000;
+	}
+
+
 }
-.page-navigator li {
-	display:inline-block;
-	margin:0 5px 5px 0;
-}
-.page-navigator .current a {
-	color:#444;
-	border-top-color:#FF0000;
-}
-.page-navigator a {
-	display:inline-block;
-	height:20px;
-	border-top:2px solid #FFFFFF;
-	padding:5px 9px;
-	line-height:20px;
-}
-.page-navigator a:hover {
-	border-color:#FF0000;
-}
+
+
+
+
+
+
+
+// 页脚
 #footer {
 	position:relative;
 	padding:20px 0 15px;
 	text-shadow:1px 1px 5px #D3D3D3;
 }
+
+
+// 页面容器
 .container {
 	margin:0;
 	padding:0 20px;
 }
+
+
+// 返回顶部
 #toTop {
 	bottom:5px;
 	right:5px;
 	font:normal 30px 'Electrolize',Verdana;
 	position:absolute;
 }
-/* 结构结束 */
-
-/* 评论区域 */
-#comments {
-	margin-top:5px;
-	border-top:1px dotted #ccc;
-}
-#comments h4 {
-	margin:5px 0;
-	font-size:18px;
-}
-#comments ol {
-	list-style:none;
-}
-.comment-author {
-	position:relative;
-	width:250px;
-	height:27px;
-	float:left;
-}
-.comment-author .avatar {
-	width:22px;
-	height:22px;
-	padding:2px;
-	border:1px solid rgb(190,190,190);
-	border-bottom:none;
-}
-.comment-meta {
-	height:16px;
-	padding:2px;
-	margin-top:6px;
-	float:right;
-	border:1px solid #ddd;
-	border-bottom:none;
-}
-.fn {
-	font-size:16px;
-	font-style:normal;
-	position:absolute;
-	top:6px;
-	left:35px;
-}
-.fn a {
-	color:#C10D0C;
-}
-.cancel-comment-reply {
-	height:16px;
-	padding:5px 0 2px 0;
-}
-.comment-content {
-	clear:both;
-	margin-bottom:8px;
-	padding:8px 10px;
-	border:1px solid #DDD;
-}
-.comment-children {
-	padding-left:30px;
-	border-left:1px solid #F7F7F7;
-}
-#comment-form {
-	margin-top:10px;
-}
-input[type="text"], input[type="email"], input[type="url"], input[type="password"] {
-	padding: 5px;
-	border: 1px solid #DDD;
-	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-#comment-form label {
-	display: block;
-	margin: 5px 0 2px;
-	font-weight: bold;
-}
-#comment-form .required:after {
-content: " *";
-color: #C00;
-}
-.submit {
-	width:100%;
-	height:28px;
-	margin-bottom:5px;
-	border:none;
-	background:#0090C9;
-	color:white;
-	cursor:pointer;
-	font-size:16px;
-}
-.submit:active {
-	background:#006992;
-}
-#comment-form textarea {
-	width:100%;
-	height:100px;
-	border:none;
-	outline:0;
-	background:transparent;
-	font:normal 12px "微软雅黑";
-	line-height:22px;
-	color:rgba(0,0,0,1);
-	resize:none;
-	overflow:auto;
-	vertical-align:bottom;
-}
-#comment-form .comment-area {
-	margin-top:10px;
-	padding:7px;
-	border:1px solid #DDD;
-}	
-/* 评论区域结束 */
-
-/* 独立页面 */
-.browsehappy {
-	text-align:center;
-	padding:10px;
-	border-bottom:2px solid #FF0000;
-	background:#FFF;
-	font-size:20px;
-	color:#FF0000;
-}
-.error-page p {
-	font-size:40px;
-	font-weight:bold;
-	text-align:center;
-}
-.error-page em {
-	font-style:normal;
-	font-size:180px;
-}
-#about {
-	text-align:center;
-	padding:10px 10px 0;
-	letter-spacing:1px;
-}
-#about a {
-	color:#C10D0C;
-}
-#about p {
-	margin:1em 0;
-}
-.links {
-	margin:1em 0;
-}
-#about div.mostactive {
-	display:inline;
-	margin:0 1px;
-}
-.links ul {
-	list-style:none;
-}
-.links li {
-	padding:0 5px;
-	display:inline;
-}
-#archives {
-	padding:0 10px;
-	line-height:150%;
-}
-#archives ul,#archives li {
-	list-style:none;
-}
-#archives a {
-	color:#333;
-}
-#archives a:hover {
-	color:#C10D0C;
-}
-ul.al_post_list {
-	margin-left:50px;
-	padding-left:5px;
-	border-left:1px solid #CCC;
-}
-.archli {
-	margin:10px 0;
-	padding:5px;
-	background:#F5F8FA;
-	border:1px solid #DDD;
-}
-.archive-title {
-	margin-bottom:10px;
-}
-h3.al_year {
-	font-size:20px;
-	padding:10px 5px;
-	border-left:3px solid #FF0000;
-}
-.al_mon_list {
-	border-left:1px solid #CCC;
-}
-.al_mon {
-	display:block;
-	padding-left:5px;
-	border-bottom:1px solid #ccc;
-}
-/* 独立页面结束 */
