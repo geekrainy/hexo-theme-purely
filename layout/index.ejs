@@ -1,8 +1,7 @@
-<h2 class="outline">Article List</h2>
 <% page.posts.each(function(post){ %>
   <article class="post">
     <a href="<%- url_for(post.path) %>">
-      <h3><%= post.title %></h3>
+      <h1><%= post.title %></h1>
       <div class="pocontent"><%- post.content %></div>
     </a>
   </article>
