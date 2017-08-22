@@ -46,19 +46,22 @@ body {
 	-webkit-font-smoothing:antialiased;
 }
 #wrapper {
-	width:670px;
+	width:900px;
 	margin:80px auto;
 	padding:0;
 	border:1px solid #DDD;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	background:#FFF;
 	overflow:hidden;
 }
 #header {
-	padding:40px 20px 0;
+	padding:50px 50px 0;
 	text-shadow:1px 1px 5px #D3D3D3;
 }
 #logo {
-	font:normal 30px 'Electrolize',Verdana;
+	font:normal 50px 'Electrolize',Verdana;
 
 	&:hover {
 		color:#C10D0C;
@@ -78,6 +81,8 @@ body {
 #nav-menu ul,#nav-menu li {
 	list-style:none;
 	float:left;
+	margin: 0;
+	padding: 0;
 }
 #nav-menu a {
 	color:#333;
