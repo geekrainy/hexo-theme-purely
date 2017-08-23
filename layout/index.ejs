@@ -1,9 +1,7 @@
 <% page.posts.each(function(post){ %>
   <article class="post">
-    <a href="<%- url_for(post.path) %>">
-      <h1><%= post.title %></h1>
+      <h1><a href="<%- url_for(post.path) %>"><%= post.title %></a></h1>
       <div class="pocontent"><%- post.content %></div>
-    </a>
   </article>
 <% }) %>
 <% if (page.total > 1){ %>
