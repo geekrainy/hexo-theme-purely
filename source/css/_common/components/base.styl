@@ -1,8 +1,8 @@
+// 外链字体
 @import url('https://fonts.googleapis.com/css?family=Electrolize');
 
 
 /* 全局 */
-
 .clearfix {
 	zoom:1;
 }
@@ -17,24 +17,21 @@ a {
 	color:#333;
 	text-decoration:none;
 	outline:none;
-}
-a:hover,a:active {
-	color:#C10D0C;
-}
-a:focus {
-	outline:none;
-}
 
+	&:hover,
+	&:active {
+		color: #C10D0C;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
 
 img {
 	border:0;
 }
 
-
-
-
-
-/* 内容区结束 */
 
 /* 结构 */
 body {
@@ -54,127 +51,11 @@ body {
 	background:#FFF;
 	overflow:hidden;
 }
-#header {
-	padding:50px 50px 0;
-	text-shadow:1px 1px 5px #D3D3D3;
-}
-#logo {
-	font: normal 50px 'Electrolize',Verdana;
 
-	&:hover {
-		color:#C10D0C;
-	}
-}
-.description {
-	font-size:14px;
-	line-height:28px;
-	margin:5px 0;
-}
-#nav-menu {
-	width:100%;
-	height:50px;
-	padding-top: 50px;
-	border-bottom:1px solid #E0E0E0;
-	float:left;
-}
-#nav-menu ul,#nav-menu li {
-	list-style:none;
-	float:left;
-	margin: 0;
-	padding: 0;
-}
-#nav-menu a {
-	color:#333;
-	display:inline-block;
-	line-height: 50px;
-	margin-right:30px;
-	padding:0 40px;
-	font-size:16px;
-
-	&:hover {
-		border-bottom:1px solid #FF0000;
-	}
-}
-
-#search {
-	float:right;
-}
-#search input {
-	box-sizing: border-box;
-	width:100px;
-	height:50px;
-	padding:0;
-	border:0;
-	outline:none;
-	color:#4B4B4B;
-}
-#search input:focus {
-	height: 50px;
-	border-bottom: 1px solid #000;
-	border-bottom-color:#FF0000;
-	padding: 0 10px;
-	width:150px;
-	background: #FCFCFC;
-}
 #main {
 	padding:50px 50px 0;
 }
-#main h2.archive-title {
-	display:block;
-}
-#main h2.post-title {
-	display:block;
-}
-.post {
-	padding-bottom:20px;
-	border-left:1px solid #DDD;
-	font-size:14px;
-	line-height:140%;
 
-	&:hover {
-		color: #222;
-		border-color: #FF0000;
-
-		& a {
-			color: #222;
-		}
-
-		h1 {
-			border-color: #FF0000;
-		}
-	}
-
-	a {
-		color: #333;
-
-	}
-
-  
-	h1 {
-		margin: 0;
-		padding: 20px 0 20px 20px;
-		border-bottom: 1px solid #DDD;
-		line-height: 1.25;
-	}
-
-}
-
-
-.post-meta {
-	color:rgb(0,0,0);
-	list-style:none;
-	border-bottom:1px #ccc dotted;
-}
-.post-meta li {
-	display:inline-block;
-	margin:5px 20px 5px 0;
-}
-.pocontent {
-	padding: 20px 0 0 20px;
-	figure.highlight {
-		margin-left: 0;
-	}
-}
 
 .page-navigator {
 	color:#666;
@@ -205,35 +86,4 @@ body {
 		color:#444;
 		border-top-color:#FF0000;
 	}
-
-
-}
-
-
-
-
-
-
-
-// 页脚
-#footer {
-	position:relative;
-	padding:0 50px 50px;
-	text-shadow:1px 1px 5px #D3D3D3;
-}
-
-
-// 页面容器
-.container {
-	margin:0;
-	padding:0 20px;
-}
-
-
-// 返回顶部
-#toTop {
-	bottom:5px;
-	right:5px;
-	font:normal 30px 'Electrolize',Verdana;
-	position:absolute;
 }
