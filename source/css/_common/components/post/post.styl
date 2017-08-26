@@ -19,11 +19,11 @@
 
 	&:hover {
 		color: #222;
-		border-color: #FF0000;
+		border-color: #C10D0C;
 
 		& a {color: #222;}
 
-		h1 {border-color: #FF0000;}
+		h1 {border-color: #C10D0C;}
 	}
 
 }
@@ -31,66 +31,56 @@
 
 /* 内容区markdown */
 .post-content {
-	line-height:150%;
-	margin:10px 0;
+	font-size: 16px;
+	font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+	text-align: justify;
+	line-height: 1.7;
 
 	// 代码高亮
 	figure {margin: 0;}
 
-	pre,code {
-		padding:2px 4px;
-		background:#F3F3F0;
-		font-family:Menlo,Monaco,Consolas,"Lucida Console","Courier New",monospace;
-		font-size:.92857em;
+	code {
+		padding: 2px 4px;
+		background: #EEE;
+		font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+		font-size: 12px;
 	}
-
-	code {color:#B94A48;}
 
 	pre {
-		padding:8px;
-		overflow:auto;
-		max-height:300px;
+		padding: 10px;
+		overflow: auto;
+		background: #EEE;
 
-		code {color: #444;}
+		code {
+			padding: 0;
+		}
 	}
 
 
-	// Markdown 样式
+	// 标签
 	blockquote {
-		margin:1em 0;
-		margin-left:1.5em;
-		padding-left:1em;
-		border-left:1px solid #C10D0C;
+		margin: 1em 0;
+		padding: 1em 2em;
+		border-left: 1px solid #cecece;
 	}
 
-	ul {
-		padding:.5em 2em!important;
-		list-style-type: square;
+	hr {
+		margin: 40px 0;
+		height: 1px;
+		background: #ccc;
+		border: none;
 	}
 
-	ol {
-		padding:.5em 2em!important;
-	}
-
-	// 图片样式
 	img {
-		border:1px solid rgb(224,224,224);
-		padding:2px;
+		display: block;
+		margin: 0 auto;
+		padding: 5px;
+		border: 1px solid #CCC;
 
 		&:hover {
 			border-color: #C10D0C;
 		}
 	}
-
-
-	// 待添加样式
-	// dl {}
-
-	// dt {
-	// 	font-weight: bold;
-	// }
-
-	// dd {}
 
 }
 
@@ -101,4 +91,17 @@
 	figure.highlight {
 		margin-left: 0;
 	}
+}
+
+
+
+// post 详情页
+
+.post-detail {
+	.post-meta {
+		margin: 0;
+		padding: 0;
+
+	}
+
 }

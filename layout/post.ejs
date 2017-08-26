@@ -1,15 +1,6 @@
-  <article class="postin">
+  <article class="post-detail">
     <h1 class="post-title"><a href="<%- url_for(page.link) %>"><%= page.title %></a></h1>
-    <ul class="post-meta">
-      <li><%= __('作者: ') %><%= config.author %></li>
-      <li><%= __('日期: ') %><%= date(page.date, 'MMM D') %></li>
-      <li><%= __('分类: ') %><%- list_categories(page.categories, {
-      show_count: false,
-      class: 'article-category',
-      style: 'none',
-      separator: ' > '
-    }) %></li>
-    </ul>
+    <%- partial('_partial/post/post-meta') %>
     <div class="post-content">
         <%- page.content %>
     </div>

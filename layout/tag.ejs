@@ -1,28 +1,13 @@
 <h2 class="archive-title"></h2>
   <% page.posts.each(function(post){ %>
-      <article class="postin archli">
+  <article class="post-detail archli">
     <h1 class="post-title"><a href="<%- url_for(post.link) %>"><%= post.title %></a></h1>
-    <ul class="post-meta">
-      <li><%= config.author %></li>
-      <li><%= date(post.date, 'MMM D') %></li>
-      <li><%- list_categories(post.categories, {
-      show_count: false,
-      class: 'article-category',
-      style: 'none',
-      separator: '►'
-    }) %></li>
-    </ul>
-          <div class="post-content">
-        <%- post.content %>
-          </div>
+    <%- partial('_partial/post/post-meta') %>
+    <div class="post-content">
+      <%- post.content %>
+    </div>
   </article>
   <% }) %>
 <% if (page.total > 1){ %>
-  <ol class="page-navigator">
-    <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
-    <%- paginator({
-      prev_text: prev_text,
-      next_text: next_text
-    }) %>
-  </ol>
+  <%- partial('_partial/pagination') %>
 <% } %>
