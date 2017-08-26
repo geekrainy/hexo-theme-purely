@@ -1,0 +1,27 @@
+{
+  "name": "purely",
+  "homepage": "https://github.com/geekrainy/hexo-theme-purely",
+  "authors": [
+    "Rainy <geekrainy@gmail.com>"
+  ],
+  "description": "Purely theme for Hexo",
+  "main": "",
+  "keywords": [
+    "hexo",
+    "theme",
+    "purely",
+    "geekrainy"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}
