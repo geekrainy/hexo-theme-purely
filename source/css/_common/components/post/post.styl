@@ -36,32 +36,22 @@
 	text-align: justify;
 	line-height: 1.7;
 
-	// 代码高亮
-	figure {margin: 0;}
-
-	code {
-		padding: 2px 4px;
-		background: #EEE;
-		font-family: Menlo,Monaco,Consolas,Courier New,monospace;
-		font-size: 12px;
-	}
-
-	pre {
-		padding: 10px;
-		overflow: auto;
-		background: #EEE;
-
-		code {
-			padding: 0;
-		}
-	}
-
-
 	// 标签
 	blockquote {
+		position: relative;
 		margin: 1em 0;
-		padding: 1em 2em;
-		border-left: 1px solid #cecece;
+		padding: 2em 2em 1em;
+		border-left: 1px solid #e6e6e6;
+		background: #F9F9F9;
+
+		&::before {
+			content: '\f10d';
+			position: absolute;
+			top: -10px;
+			color: #ccc;
+			font-size: 40px;
+			font-family: FontAwesome;
+		}
 	}
 
 	hr {
@@ -82,11 +72,44 @@
 		}
 	}
 
+
+	// 表格样式
+	& > table {
+		width: 100%;
+		margin: 2em;
+		border-collapse: collapse;
+
+		th, td {
+			padding: 0 2em;
+			height: 2em;
+		}
+
+		th {
+			border-bottom: 2px solid #DDD;
+		}
+		
+
+		tbody tr {
+			height: 20px;
+			border-bottom: 1px solid #ccc;
+
+			&:nth-child(odd) {
+				background: #EEE;
+			}
+		}
+	}
+
+
+
+
 }
+// 内容区结束
 
 
 /* PoContent */
 .pocontent {
+	@extend .post-content;
+
 	padding: 20px 0 0 20px;
 	figure.highlight {
 		margin-left: 0;
