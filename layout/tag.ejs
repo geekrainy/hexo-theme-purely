@@ -1,6 +1,6 @@
 <h2 class="archive-title"></h2>
   <% page.posts.each(function(post){ %>
-  <article class="post-detail archli">
+  <article class="post-detail">
     <h1 class="post-title"><a href="<%- url_for(post.link) %>"><%= post.title %></a></h1>
     <%- partial('_partial/post/post-meta') %>
     <div class="post-content">

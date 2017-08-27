@@ -12,13 +12,13 @@
 	clear:both;
 }
 a {
-	color:#333;
+	color:$black-dim;
 	text-decoration:none;
 	outline:none;
 
 	&:hover,
 	&:active {
-		color: #C10D0C;
+		color: $red;
 	}
 
 	&:focus {
@@ -33,8 +33,8 @@ img {
 
 /* 结构 */
 body {
-	color:#333;
-	background:#F1F1F1;
+	color:$black-dim;
+	background: $body-bg-color;
 	font:normal 14px "TIBch","Classic Grotesque W01","Helvetica Neue",Arial,"Hiragino Sans GB","STHeiti","Microsoft YaHei","WenQuanYi Micro Hei",SimSun,sans-serif;
 	-webkit-font-smoothing:antialiased;
 }
@@ -42,11 +42,11 @@ body {
 	width:900px;
 	margin:80px auto;
 	padding:0;
-	border:1px solid #DDD;
+	border:1px solid $grey-light;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	background:#FFF;
+	background:$wrapper-bg-color;
 	overflow:hidden;
 }
 
@@ -58,11 +58,11 @@ body {
 	width: 100%;
 	height: 50px;
 	margin-top: 50px;
-	border-top: 1px solid #e0e0e0;
+	border-top: 1px solid $full-line-color;
 	float: left;
 
 	.current {
-		border-top: 1px solid #C10D0C;
+		border-top: 1px solid $red;
 		position: relative;
 		top: -1px;
 	}
@@ -91,7 +91,7 @@ body {
 		&:hover {
 			position: relative;
 			top: -1px;
-			border-top: 1px solid #C10D0C;
+			border-top: 1px solid $red;
 		}
 	}
 }

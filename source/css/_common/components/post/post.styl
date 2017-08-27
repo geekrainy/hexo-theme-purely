@@ -3,27 +3,27 @@
 /* Structure */
 .post {
 	padding-bottom:20px;
-	border-left:1px solid #DDD;
+	border-left:1px solid $grey-light;
 	font-size:14px;
 	line-height:140%;
 
 
-	a {color: #333;}
+	a {color: $black-dim;}
 
-	h1 {
+	& > h1 {
 		margin: 0;
 		padding: 20px 0 20px 20px;
-		border-bottom: 1px solid #DDD;
+		border-bottom: 1px solid $grey-light;
 		line-height: 1.25;
 	}
 
 	&:hover {
-		color: #222;
-		border-color: #C10D0C;
+		color: $black-deep;
+		border-color: $red;
 
-		& a {color: #222;}
+		& a {color: $black-deep;}
 
-		h1 {border-color: #C10D0C;}
+		h1 {border-color: $red;}
 	}
 
 }
@@ -41,14 +41,14 @@
 		position: relative;
 		margin: 1em 0;
 		padding: 2em 2em 1em;
-		border-left: 1px solid #e6e6e6;
-		background: #F9F9F9;
+		border-left: 1px solid $full-line-color;
+		background: ;
 
 		&::before {
 			content: '\f10d';
 			position: absolute;
 			top: -10px;
-			color: #ccc;
+			color: $grey;
 			font-size: 40px;
 			font-family: FontAwesome;
 		}
@@ -57,7 +57,7 @@
 	hr {
 		margin: 40px 0;
 		height: 1px;
-		background: #ccc;
+		background: $grey;
 		border: none;
 	}
 
@@ -65,10 +65,10 @@
 		display: block;
 		margin: 0 auto;
 		padding: 5px;
-		border: 1px solid #CCC;
+		border: 1px solid $grey;
 
 		&:hover {
-			border-color: #C10D0C;
+			border-color: $red;
 		}
 	}
 
@@ -85,16 +85,16 @@
 		}
 
 		th {
-			border-bottom: 2px solid #DDD;
+			border-bottom: 2px solid $grey-light;
 		}
 		
 
 		tbody tr {
 			height: 20px;
-			border-bottom: 1px solid #ccc;
+			border-bottom: 1px solid $grey;
 
 			&:nth-child(odd) {
-				background: #EEE;
+				background: $bg-light;
 			}
 		}
 	}

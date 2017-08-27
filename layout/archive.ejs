@@ -1,32 +1,55 @@
   <% 
-      var years = {}, months = {};
-      site.posts.sort('date').reverse().forEach(function(post){
-          var year = post.date.year(), month = post.date.month();
-          if(years[year]===undefined){
-              years[year] = [];
-          }
-          if(months[month]===undefined){
-            months[month] = [];
-          }
-          years[year].push(month);
-          months[month].push(post);
-      });
+    var years = {}, months = {};
+    site.posts.sort('date').reverse().forEach(function(post){
+        var year = post.date.year(), month = post.date.month();
+        if(years[year]===undefined){
+            years[year] = [];
+        }
+        if(months[month]===undefined){
+          months[month] = [];
+        }
+        years[year].push(month);
+        months[month].push(post);
+    });
   %>
   <% Object.keys(years).reverse().forEach(function(year){  %>
-  <article class="post-detail">
-    <div id="archives">
-      <h3 class="al_year"><%= year %></h3>
-      <% Object.keys(months).reverse().forEach(function(month){  %>
-        <ul class="al_mon_list">
-          <li clsss="li_mon"><span class="al_mon"><%= month %></span>
-              <ul class="al_post_list">
-                <% months[month].map(function(post){  %>
-                  <li><a href="<%- config.root %><%- post.path %>"><%- post.title || "Untitled" %></a><em>(0)</em></li>
-                <% }) %>
-              </ul>
-          </li>
-        </ul>
-      <% }) %>
-    </div>
-  </article>
+    <article class="post-detail">
+      <div id="archives">
+        <h3 class="al_year"><%= year %></h3>
+        <% Object.keys(months).reverse().forEach(function(month){  %>
+          <ul class="al_mon_list">
+            <li clsss="li_mon"><span class="al_mon"><%= month %></span>
+                <ul class="al_post_list">
+                  <% months[month].map(function(post){  %>
+                    <li><a href="<%- config.root %><%- post.path %>"><%- post.title || "Untitled" %></a><em>(0)</em></li>
+                  <% }) %>
+                </ul>
+            </li>
+          </ul>
+        <% }) %>
+      </div>
+    </article>
   <% }) %>
+
+  <% var last;
+    page.posts.each(function(post, i) {
+        var year = post.date.year();
+        if (last != year) {
+            last = year; %>
+            <div class="timeline-row timeline-row-major">
+                <span class="node"><i class="fa fa-calendar"></i></span>
+                <h1 class="title"><%= year %></h1>
+            </div>
+        <% } %>
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
+                <%- partial('common/post/title', { post: post, index: true, class_name: 'timeline-article-title' }) %>
+                <div class="article-meta">
+                    <%- partial('common/post/date', { post: post, class_name: 'article-date', date_format: null }) %>
+                    <%- partial('common/post/category', { post: post }) %>
+                    <%- partial('common/post/tag', { post: post }) %>
+                </div>
+            </div>
+        </div>
+    <% }); %>
