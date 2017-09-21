@@ -21,4 +21,10 @@ git clone https://github.com/geekrainy/hexo-theme-purely.git themes/purely
 theme: purely
 ```
 
-## 待完善...
+## TODO
+
+- [ ] 代码高亮主题
+- [ ] 评论插件支持
+- [ ] 移动端适配
+- [ ] 数据统计支持
+- [ ] 搜索支持
