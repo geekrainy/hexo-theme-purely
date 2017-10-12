@@ -10,3 +10,9 @@ fancybox: true
 
 # Miscellaneous
 favicon: /favicon.png
+
+
+# Site analytics
+google_analytics:
+cnzz_analytics:
+tencent_analytics:
