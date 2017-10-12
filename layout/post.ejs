@@ -2,6 +2,7 @@
     <h1 class="post-title"><a href="<%- url_for(page.link) %>"><%= page.title %></a></h1>
     <%- partial('_partial/post/post-meta') %>
     <div class="post-content">
+        <%- partial('_partial/post/gallery') %>
         <%- page.content %>
     </div>
     <p class="tags">
