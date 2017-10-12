@@ -1,2 +1,6 @@
 source/lib/font-awesome/less
 source/lib/font-awesome/scss
+source/lib/fancybox/*
+!source/lib/fancybox/dist/
+source/lib/jquery/*
+!source/lib/jquery/dist/
