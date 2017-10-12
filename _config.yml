@@ -11,6 +11,8 @@ fancybox: true
 # Miscellaneous
 favicon: /favicon.png
 
+# Comments
+disqus_shortname:
 
 # Site analytics
 google_analytics:
