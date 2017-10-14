@@ -1,12 +1,14 @@
 (function($){
 
   // Fancybox support
-  $('.post-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().attr('data-fancybox') == 'undefined') return;
-      console.log(this.attr);
-      var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');
-      $imageWrapLink = $image.wrap('<a href="' + imageLink + '"></a>').parent('a');
+  $('.pocontent').each(function(i){
+    console.log('post')
+    $(this).find('img').each(function(i){
+      if ($(this).parent().attr('data-fancybox')) return;
+
+      var alt = this.alt;
+
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
 
       $(this).wrap('<a href="' + this.src + '" data-fancybox title="' + alt + '"></a>');
     });
