@@ -2,7 +2,6 @@
 
   // Fancybox support
   $('.pocontent').each(function(i){
-    console.log('post')
     $(this).find('img').each(function(i){
       if ($(this).parent().attr('data-fancybox')) return;
 
@@ -19,7 +18,13 @@
   });
 
   if ($.fancybox){
-    $.attr('data-fancybox').fancybox();
+    $("[data-fancybox]").fancybox({
+      loop: true,
+      arrows: true,
+      thumbs : {
+        autoStart : true
+      }
+    });
   }
 
 })(jQuery);
