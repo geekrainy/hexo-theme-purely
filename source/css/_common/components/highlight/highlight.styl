@@ -1,3 +1,20 @@
+// Highlight Color
+$highlight-deletion     = #fdd
+$highlight-addition     = #dfd
+$highlight-background   = #1d1f21
+$highlight-current-line = #282a2e
+$highlight-selection    = #373b41
+$highlight-foreground   = #c5c8c6
+$highlight-comment      = #969896
+$highlight-red          = #cc6666
+$highlight-orange       = #de935f
+$highlight-yellow       = #f0c674
+$highlight-green        = #b5bd68
+$highlight-aqua         = #8abeb7
+$highlight-blue         = #81a2be
+$highlight-purple       = #b294bb
+$highlight-gutter       = #737373
+
 .post-content {
   figure.highlight {
 		margin: 2em 0;
@@ -6,13 +23,15 @@
 		font-size: 12px;
 		overflow: scroll;
 		overflow-y: hidden;
+		overflow-x: auto;
 
 		.gutter {
-			color: #30FFFF;
+			color: $hight-gutter;
 		}
 
 		pre {
 			background: $black-deep;
+			margin: 0;
 		}
 	}
 
@@ -32,5 +51,77 @@
 		code {
 			padding: 0;
 		}
+	}
+
+
+
+	pre .deletion { background: $highlight-deletion; }
+	pre .addition { background: $highlight-addition; }
+	pre .meta     { color: $highlight-purple; }
+
+	pre {
+
+		.comment { color: $highlight-comment; }
+
+		.variable
+		.attribute
+		.tag
+		.regexp
+		.ruby .constant
+		.xml .tag .title
+		.xml .pi
+		.xml .doctype
+		.html .doctype
+		.css .id
+		.css .class
+		.css .pseudo {
+			color: $highlight-red;
+		}
+
+		.number
+		.preprocessor
+		.built_in
+		.literal
+		.params
+		.constant
+		.command {
+			color: $highlight-orange;
+		}
+
+		.ruby .class .title
+		.css .rules .attribute
+		.string
+		.value
+		.inheritance
+		.header
+		.ruby .symbol
+		.xml .cdata
+		.special
+		.number
+		.formula {
+			color: $highlight-green;
+		}
+
+		.title
+		.css .hexcolor {
+			color: $highlight-aqua;
+		}
+
+		.function
+		.python .decorator
+		.python .title
+		.ruby .function .title
+		.ruby .title .keyword
+		.perl .sub
+		.javascript .title
+		.coffeescript .title {
+			color: $highlight-blue;
+		}
+
+		.keyword
+		.javascript .function {
+			color: $highlight-purple;
+		}
+
 	}
 }
