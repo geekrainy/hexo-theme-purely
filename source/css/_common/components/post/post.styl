@@ -1,27 +1,29 @@
 @import "post-meta"
 
-/* Structure */
+
+// Structure
+
 .post {
 	padding-bottom:20px;
-	border-left:1px solid $grey-light;
+	border-left:1px solid $gray-300;
 	font-size:14px;
 	line-height:140%;
 
 
-	a {color: $black-dim;}
+	a {color: $body-font;}
 
 	& > h1 {
 		margin: 0;
 		padding: 20px 0 20px 20px;
-		border-bottom: 1px solid $grey-light;
+		border-bottom: 1px solid $gray-300;
 		line-height: 1.25;
 	}
 
 	&:hover {
-		color: $black-deep;
+		color: $gray-900;
 		border-color: $line-light;
 
-		& a {color: $black-deep;}
+		& a {color: $gray-900;}
 
 		h1 {border-color: $line-light;}
 	}
@@ -29,7 +31,8 @@
 }
 
 
-/* 内容区markdown */
+// Markdown
+
 .post-content {
 	font-size: 16px;
 	font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
@@ -40,19 +43,18 @@
 		margin-left: 0;
 	}
 
-	// 标签
 	blockquote {
 		position: relative;
 		margin: 1em 0;
 		padding: 2em 2em 1em;
-		border-left: 1px solid $line-dark;
-		background: ;
+		border-left: 1px solid $line-light;
+		background: $gray-200;
 
 		&::before {
 			content: '\f10d';
 			position: absolute;
 			top: -10px;
-			color: $grey;
+			color: $grey-350;
 			font-size: 40px;
 			font-family: FontAwesome;
 		}
@@ -79,7 +81,8 @@
 	}
 
 
-	// 表格样式
+	// Table
+
 	& > table {
 		width: 100%;
 		border-collapse: collapse;
@@ -90,7 +93,7 @@
 		}
 
 		th {
-			border-bottom: 2px solid $grey-light;
+			border-bottom: 2px solid $gray-300;
 		}
 		
 
@@ -99,18 +102,15 @@
 			border-bottom: 1px solid $grey;
 
 			&:nth-child(odd) {
-				background: $bg-light;
+				background: $grey-250;
 			}
 		}
 	}
 
-
-
-
 }
-// 内容区结束
 
-// post 详情页
+
+// Post
 
 .post-detail {
 	.post-content {
@@ -120,6 +120,5 @@
 	.post-meta {
 		margin: 0;
 		padding: 0;
-
 	}
 }
