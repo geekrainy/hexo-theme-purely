@@ -35,6 +35,10 @@
 	font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 	text-align: justify;
 	line-height: 1.7;
+	padding: 20px 0 0 20px;
+	figure.highlight {
+		margin-left: 0;
+	}
 
 	// 标签
 	blockquote {
@@ -106,22 +110,13 @@
 }
 // 内容区结束
 
-
-/* PoContent */
-.pocontent {
-	@extend .post-content;
-
-	padding: 20px 0 0 20px;
-	figure.highlight {
-		margin-left: 0;
-	}
-}
-
-
-
 // post 详情页
 
 .post-detail {
+	.post-content {
+		padding: 0;
+	}
+
 	.post-meta {
 		margin: 0;
 		padding: 0;

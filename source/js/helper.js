@@ -1,7 +1,7 @@
 (function($){
 
   // Fancybox support
-  $('.pocontent').each(function(i){
+  $('.post-content').each(function(i){
     $(this).find('img').each(function(i){
       if ($(this).parent().attr('data-fancybox')) return;
 
