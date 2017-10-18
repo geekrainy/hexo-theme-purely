@@ -4,12 +4,15 @@ menu:
   Archives: /archives
 rss: /atom.xml
 
+# Schema
+color:
+
 # Content
 excerpt_link: Read More
 fancybox: true
 
 # Miscellaneous
-favicon: /favicon.png
+#favicon: /favicon.png
 
 # Comments
 disqus_shortname:
