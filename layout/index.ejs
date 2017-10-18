@@ -1,6 +1,12 @@
 <% page.posts.each(function(post){ %>
   <article class="post">
-      <h1><a href="<%- url_for(post.path) %>"><%= post.title %></a></h1>
+      <% if (post.title){ %>
+        <% if (post.link){ %>
+          <h1><a href="<%= post.link %>"><%= post.title %></a></h1>
+        <% } else { %>
+          <h1><a href="<%- url_for(post.path) %>"><%= post.title %></a></h1>
+        <% } %>
+      <% } %>
       <div class="post-content "><%- post.content %></div>
   </article>
 <% }) %>
