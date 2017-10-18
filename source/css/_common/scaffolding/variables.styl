@@ -50,10 +50,48 @@ $white                   = #FFFFFF
 $body-font               = #333333
 $body-background         = #F1F1F1
 
+$theme-color = hexo-config('color') ? hexo-config('color') : 'red'
+
+if $theme-color == 'red'
+  $line-light = $red
+if $theme-color == 'pink'
+  $line-light = $pink
+if $theme-color == 'purple'
+  $line-light = $purple
+if $theme-color == 'deep-purple'
+  $line-light = $deep-purple
+if $theme-color == 'indigo'
+  $line-light = $indigo
+if $theme-color == 'blue'
+  $line-light = $blue
+if $theme-color == 'light-blue'
+  $line-light = $light-blue
+if $theme-color == 'cyan'
+  $line-light = $cyan
+if $theme-color == 'teal'
+  $line-light = $teal
+if $theme-color == 'green'
+  $line-light = $green
+if $theme-color == 'light-green'
+  $line-light = $light-green
+if $theme-color == 'lime'
+  $line-light = $lime
+if $theme-color == 'yellow'
+  $line-light = $yellow
+if $theme-color == 'amber'
+  $line-light = $amber
+if $theme-color == 'orange'
+  $line-light = $orange
+if $theme-color == 'deep-orange'
+  $line-light = $deep-orange
+if $theme-color == 'brown'
+  $line-light = $brown
+if $theme-color == 'blue-grey'
+  $line-light = $blue-grey
+
 
 // Line
 $line-dark               = #e0e0e0
-$line-light              = #E91E63
 
 // Wrapper
 $wrapper-border          = #DDDDDD
