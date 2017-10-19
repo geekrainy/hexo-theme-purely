@@ -1,6 +1,11 @@
+<% if (is_post()) { %>
+  <%
+    var post = page
+  %>
+<% } %>
 <ul class="post-meta">
   <li><i class="fa fa-user"></i> <%= __('作者: ') %><%= config.author %></li>
-  <li><i class="fa fa-calendar"></i> <%= __('日期: ') %><%= date(page.date, 'MMM D') %></li>
+  <li><i class="fa fa-calendar"></i> <%= __('日期: ') %><%= date(post.date, 'MMM D') %></li>
   <li><i class="fa fa-folder"></i> <%= __('分类: ') %>
   <% if (post.categories.length){ %>
     <%- list_categories(post.categories, {
