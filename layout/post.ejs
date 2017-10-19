@@ -5,11 +5,15 @@
       <%- partial('_partial/post/gallery') %>
       <%- page.content %>
   </div>
-  <p class="tags">
-  <% if (page.tags && page.tags.length) { %>
-  
-  <% } %>
-  </p>
+  <div class="tags">
+  <span><i class="fa fa-tags"></i> <%= __('标签：') %></span>
+    <% if (page.tags && page.tags.length) { %>
+      <%- list_tags(page.tags, {
+        show_count: false,
+        class: 'post-tag'
+      }) %>
+    <% } %>
+  </div>
 </article>
 
 <!-- Comments -->
