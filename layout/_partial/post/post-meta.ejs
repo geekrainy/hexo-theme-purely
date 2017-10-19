@@ -1,10 +1,16 @@
 <ul class="post-meta">
   <li><i class="fa fa-user"></i> <%= __('作者: ') %><%= config.author %></li>
   <li><i class="fa fa-calendar"></i> <%= __('日期: ') %><%= date(page.date, 'MMM D') %></li>
-  <li><i class="fa fa-folder"></i> <%= __('分类: ') %><%- list_categories(page.categories, {
-    show_count: false,
-    class: 'article-category',
-    style: 'none',
-    separator: ' <i class="fa fa-caret-right"></i> '
-  }) %></li>
+  <li><i class="fa fa-folder"></i> <%= __('分类: ') %>
+  <% if (post.categories.length){ %>
+    <%- list_categories(post.categories, {
+      show_count: false,
+      class: 'article-category',
+      style: 'none',
+      separator: ' <i class="fa fa-caret-right"></i> '
+    }) %>
+  <% } else { %>
+    <%= __('未分类') %>
+  <% } %>
+  </li>
 </ul>

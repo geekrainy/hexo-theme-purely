@@ -1,6 +1,6 @@
 <article class="post-detail">
   <h1 class="post-title"><a href="<%- url_for(page.link) %>"><%= page.title %></a></h1>
-  <%- partial('_partial/post/post-meta') %>
+  <%- partial('_partial/post/post-meta', {page: post}) %>
   <div class="post-content">
       <%- partial('_partial/post/gallery') %>
       <%- page.content %>
