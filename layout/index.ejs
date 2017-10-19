@@ -7,7 +7,10 @@
           <h1><a href="<%- url_for(post.path) %>"><%= post.title %></a></h1>
         <% } %>
       <% } %>
-      <div class="post-content "><%- post.content %></div>
+      <div class="post-content ">
+        <%- partial('_partial/post/gallery', {post: post}) %>
+        <%- post.content %>
+      </div>
   </article>
 <% }) %>
 <% if (page.total > 1){ %>

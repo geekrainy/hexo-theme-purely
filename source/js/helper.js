@@ -20,10 +20,7 @@
   if ($.fancybox){
     $("[data-fancybox]").fancybox({
       loop: true,
-      arrows: true,
-      thumbs : {
-        autoStart : true
-      }
+      arrows: true
     });
   }
 
