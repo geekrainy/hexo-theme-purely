@@ -9,14 +9,25 @@
 	font-size:14px;
 	line-height:140%;
 
+	line-transition();
+	transition-property: border-color;
 
-	a {color: $body-font;}
+
+	a {
+		color: $body-font;
+
+		line-transition();
+		transition-property: color;
+	}
 
 	& > h1 {
 		margin: 0;
 		padding: 20px 0 20px 20px;
 		border-bottom: 1px solid $gray-300;
 		line-height: 1.25;
+
+		line-transition();
+		transition-property: border-color;
 	}
 
 	&:hover {
@@ -39,10 +50,27 @@
 	text-align: justify;
 	line-height: 1.7;
 	padding: 20px 0 0 20px;
-	
-	a:hover {
-		border-bottom: 1px dotted $line-dark;
+
+
+	em a {
+		border-bottom: 1px dashed $line-dark;
 	}
+
+	a {
+		line-transition();
+		transition-property: color, border;
+
+		&:hover {
+			border-bottom: 1px dashed $line-light;
+		}
+	}
+
+	cite {
+		&::before {
+			content: ' - ';
+		}
+	}
+	
 
 	figure.highlight {
 		margin-left: 0;
@@ -51,14 +79,15 @@
 	blockquote {
 		position: relative;
 		margin: 1em 0;
-		padding: 2em 2em 1em;
-		border-left: 1px solid $line-light;
-		background: $gray-200;
+		padding: 1em 2em 1em 4em;
+		
+		background: $gray-100;
 
 		&::before {
 			content: '\f10d';
 			position: absolute;
-			top: -10px;
+			top: -.2em;
+			left: .2em;
 			color: $gray-350;
 			font-size: 40px;
 			font-family: FontAwesome;
@@ -79,6 +108,9 @@
 		border: 1px solid $gray-250;
 		box-sizing: border-box;
 		max-width: 100%;
+
+		line-transition();
+		transition-property: border-color;
 
 		&:hover {
 			border-color: $line-light;
@@ -168,10 +200,6 @@
 			padding: 3px 5px;
 			background: $line-light;
 			color: $white;
-
-			&:hover {
-				border-bottom-width: 0;
-			}
 		}
 
 	}

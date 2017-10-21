@@ -5,7 +5,7 @@ menu:
 rss: /atom.xml
 
 # Schema
-color:
+color: blue
 
 # Content
 excerpt_link: Read More

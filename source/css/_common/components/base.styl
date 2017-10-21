@@ -11,10 +11,21 @@
 .clearfix:after {
 	clear:both;
 }
+
+// 动画
+line-transition() {
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+
 a {
 	color:$body-font;
 	text-decoration:none;
 	outline:none;
+
+	line-transition();
+	transition-property: color;
 
 	&:hover,
 	&:active {
@@ -51,7 +62,7 @@ body {
 }
 
 #main {
-	padding:50px 50px 0;
+	padding: 50px 50px 0;
 }
 
 .pagination {

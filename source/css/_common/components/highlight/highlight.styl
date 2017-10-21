@@ -1,25 +1,25 @@
 // Highlight Color
 $highlight-deletion     = #fdd
 $highlight-addition     = #dfd
-$highlight-background   = #1d1f21
-$highlight-current-line = #282a2e
-$highlight-selection    = #373b41
-$highlight-foreground   = #c5c8c6
-$highlight-comment      = #969896
-$highlight-red          = #cc6666
-$highlight-orange       = #de935f
-$highlight-yellow       = #f0c674
-$highlight-green        = #b5bd68
-$highlight-aqua         = #8abeb7
-$highlight-blue         = #81a2be
-$highlight-purple       = #b294bb
-$highlight-gutter       = #737373
+$highlight-background   = #f7f7f7
+$highlight-current-line = #efefef
+$highlight-selection    = #d6d6d6
+$highlight-foreground   = #4d4d4c
+$highlight-comment      = #8e908c
+$highlight-red          = #c82829
+$highlight-orange       = #f5871f
+$highlight-yellow       = #eab700
+$highlight-green        = #718c00
+$highlight-aqua         = #3e999f
+$highlight-blue         = #4271ae
+$highlight-purple       = #8959a8
+$highlight-gutter       = #869194
 
 .post-content {
   figure.highlight {
 		margin: 2em 0;
-		background: $gray-900;
-		color: $gray-300;
+		background: $highlight-background;
+		color: $highlight-foreground;
 		font-size: 12px;
 		overflow: scroll;
 		overflow-y: hidden;
@@ -30,14 +30,14 @@ $highlight-gutter       = #737373
 		}
 
 		pre {
-			background: $gray-900;
+			background: $highlight-background;
 			margin: 0;
 		}
 	}
 
 	code {
 		padding: 2px 4px;
-		background: #EEE;
+		background: $highlight-background;
 		font-family: Menlo,Monaco,Consolas,Courier New,monospace;
 		font-size: 12px;
 	}
@@ -45,7 +45,7 @@ $highlight-gutter       = #737373
 	pre {
 		padding: 10px;
 		overflow: auto;
-		background: #EEE;
+		background: $highlight-background;
 		font-family: Menlo,Monaco,Consolas,Courier New,monospace;
 
 		code {
