@@ -1,0 +1,23 @@
+title:
+  archive: Archive
+  category: Category
+  tag: Tag
+
+meta:
+  author: Author
+  date: Date
+  categories: Categories
+  no_categories: No categories
+
+menu:
+  home: Home
+  archives: Archives
+  categories: Categories
+  tags: Tags
+  about: About
+  search: Search
+  sitemap: Sitemap
+
+pagination:
+  prev: Prev
+  next: Next

@@ -1,15 +1,18 @@
 <header id="header" class="clearfix">
-	<a id="logo" href="<%- config.root %>" title="Rainy的博客"><%= config.title %></a>
+	<a id="logo" href="<%- config.root %>" title="<%= config.title %>"><%= config.title %></a>
 	<% if (theme.subtitle) { %>
 		<p class="description"><%= theme.subtitle %></p>
 	<% } %>
 	<nav id="nav-menu" class="clearfix">
 		<form id="search" method="post" action="./" role="search">
-			<input id="search-input" type="text" name="s" class="inputbox" value="Search" onfocus="if (value =='Search'){value =''}" onblur="if (value ==''){value='Search'}">
+			<input id="search-input" type="text" name="s" class="inputbox" value="<%= __('menu.search') %>" onfocus="if (value =='<%= __('menu.search') %>'){value =''}" onblur="if (value ==''){value='<%= __('menu.search') %>'}">
 		</form>
 		<ul>
       <% for (var i in theme.menu){ %>
-        <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+				<%
+					var menu_item = 'menu.' + i;
+				%>
+        <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= __(menu_item) %></a></li>
       <% } %>
 		</ul>
 	</nav>

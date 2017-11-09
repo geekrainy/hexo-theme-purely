@@ -1,0 +1,23 @@
+title:
+  archive: 归档
+  category: 分类
+  tag: 标签
+
+meta:
+  author: 作者
+  date: 日期
+  categories: 分类
+  no_categories: 未分类
+
+menu:
+  home: 主页
+  archives: 归档
+  categories: 分类
+  tags: 标签
+  about: 关于
+  search: 搜索
+  sitemap: 站点地图
+
+pagination:
+  prev: 上一页
+  next: 下一页
