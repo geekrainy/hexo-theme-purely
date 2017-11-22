@@ -1,27 +1,27 @@
   <% 
-    var years = {}, months = {};
+    var years = {};
     site.posts.sort('date').reverse().forEach(function(post){
-        var year = post.date.year(), month = post.date.month();
+        const year = post.date.year(), month = post.date.month();
         if(years[year]===undefined){
-            years[year] = [];
+            years[year] = {};
         }
-        if(months[month]===undefined){
-          months[month] = [];
+        if(years[year][month]===undefined){
+            years[year][month] = [];
         }
-        years[year].push(month);
-        months[month].push(post);
+        years[year][month].push(post.title);
     });
   %>
+
   <% Object.keys(years).reverse().forEach(function(year){  %>
     <article class="post-detail">
       <div id="archives">
         <h3 class="al_year"><%= year %></h3>
-        <% Object.keys(months).reverse().forEach(function(month){  %>
+        <% Object.keys(years[year]).reverse().forEach(function(month){  %>
           <ul class="al_mon_list">
             <li clsss="li_mon"><span class="al_mon"><%= month %></span>
                 <ul class="al_post_list">
-                  <% months[month].map(function(post){  %>
-                    <li><a href="<%- config.root %><%- post.path %>"><%- post.title || "Untitled" %></a></li>
+                  <% years[year][month].map(function(post){  %>
+                    <li><a href="<%- config.root %><%- post.path %>"><%- post || "Untitled" %></a></li>
                   <% }) %>
                 </ul>
             </li>
