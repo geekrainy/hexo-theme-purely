@@ -2,7 +2,13 @@
   <h1 class="post-title"><a href="<%- url_for(page.link) %>"><%= page.title %></a></h1>
   <%- partial('_partial/post/post-meta') %>
   <div class="post-content">
-      <%- partial('_partial/post/gallery') %>
+      <% if (!is_post()) { %>
+        <% const page = post %>
+    
+        <% if (page.photos && page.photos.length){ %>
+          <%- partial('_partial/post/gallery', {page: page}) %>
+        <% } %>
+      <% } %>
       <%- page.content %>
   </div>
   <% if(page.tags.length) { %>
