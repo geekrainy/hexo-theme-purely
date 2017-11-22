@@ -1,3 +1,8 @@
+<% if (!is_post()) { %>
+  <% var page = post %>
+<% } %>
+
+<% if (page.photos && page.photos.length){ %>
 <div class="post-gallery">
   <div class="post-gallery-photos">
     <% page.photos.forEach(function(photo, i){ %>
@@ -9,4 +14,4 @@
     <% }) %>
   </div>
 </div>
-
+<% } %>
