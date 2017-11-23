@@ -6,18 +6,6 @@
       <% } %>
       <%- page.content %>
   </div>
-  <% if(page.tags.length) { %>
-    <div class="tags">
-    <span><i class="fa fa-tags"></i> <%= __('meta.tags') %></span>
-      <% if (page.tags && page.tags.length) { %>
-        <%- list_tags(page.tags, {
-          show_count: false,
-          class: 'post-tag'
-        }) %>
-      <% } %>
-    </div>
-  <% } %>
-
 </article>
 
 <!-- Comments -->
