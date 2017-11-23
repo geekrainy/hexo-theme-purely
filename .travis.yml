@@ -1,0 +1,22 @@
+language: node_js
+
+node_js: stable
+
+install:
+  - npm install -g hexo
+  - npm install
+  - git config user.name "Rainy"
+  - git config user.email "geekrainy@gmail.com"
+  - git clone -b purely https://github.com/geekrainy/hexo-theme-unit-test.git
+  - cd hexo-theme-unit-test
+  - npm install
+  - git clone -b geekrainy https://github.com/geekrainy/hexo-theme-purely.git themes/purely
+
+script:
+  - hexo cl
+  - hexo g
+  - hexo d
+
+branches:
+  only:
+    - master
