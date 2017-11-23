@@ -9,6 +9,7 @@ install:
   - git config user.email "geekrainy@gmail.com"
   - git clone -b purely https://github.com/geekrainy/hexo-theme-unit-test.git
   - cd hexo-theme-unit-test
+  - sed -i s/'$DEPLOY_TOKEN'/$DEPLOY_TOKEN/g _config.yml
   - npm install
   - git clone https://github.com/geekrainy/hexo-theme-purely.git themes/purely
 
