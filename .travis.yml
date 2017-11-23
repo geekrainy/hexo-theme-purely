@@ -10,7 +10,7 @@ install:
   - git clone -b purely https://github.com/geekrainy/hexo-theme-unit-test.git
   - cd hexo-theme-unit-test
   - npm install
-  - git clone -b geekrainy https://github.com/geekrainy/hexo-theme-purely.git themes/purely
+  - git clone https://github.com/geekrainy/hexo-theme-purely.git themes/purely
 
 script:
   - hexo cl
