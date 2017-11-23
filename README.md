@@ -1,6 +1,6 @@
 # Purely
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/geekrainy/hexo-theme-purely)  
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/geekrainy/hexo-theme-purely)  [![Scrutinizer Build](https://img.shields.io/scrutinizer/build/g/filp/whoops.svg?style=flat-square)](https://travis-ci.org/geekrainy/hexo-theme-purely)  
 
 Purely 是一款极简的主题，前身为 Simple，重新启动开发，更名为 Purely. 这里是 [Hexo](https://hexo.io/) 的版本，此版本仍在开发中，我将尽快完成它。包括完善基本配置、加入新的配色、优化目录架构和编码规范。
 
@@ -19,6 +19,33 @@ git clone https://github.com/geekrainy/hexo-theme-purely.git themes/purely
 ```yml
 ## Themes: http://hexo.io/themes/
 theme: purely
+```
+
+主题配置文件：
+```yml
+# Header
+menu:
+  home: /
+  archives: /archives
+rss: /atom.xml
+
+# Schema
+color: blue
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Miscellaneous
+#favicon: /favicon.png
+
+# Comments
+disqus_shortname:
+
+# Site analytics
+google_analytics:
+cnzz_analytics:
+tencent_analytics:
 ```
 
 ## TODO
