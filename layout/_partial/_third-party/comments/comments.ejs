@@ -1,0 +1,9 @@
+<% if (theme.disqus_shortname || theme.gitment.enable){ %>
+<section id="comments">
+  <% if (theme.disqus_shortname) { %>
+    <%- partial('./disqus') %>
+  <% } else { %>
+    <%- partial('./gitment') %>
+  <% } %>
+</section>
+<% } %>

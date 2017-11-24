@@ -40,12 +40,22 @@ fancybox: true
 #favicon: /favicon.png
 
 # Comments
+## Disqus
 disqus_shortname:
+## Gitment
+gitment:
+  enable: false
+  github_user:
+  github_repo:
+  client_id:
+  client_secret:
+
 
 # Site analytics
 google_analytics:
 cnzz_analytics:
 tencent_analytics:
+
 ```
 
 ## TODO
@@ -53,6 +63,7 @@ tencent_analytics:
 - [x] 代码高亮主题
 - [ ] 评论插件支持
   - [x] Disqus
+  - [x] Gitment
 - [ ] 移动端适配
 - [x] 数据统计支持
 - [ ] 搜索支持

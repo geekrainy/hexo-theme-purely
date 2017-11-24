@@ -15,7 +15,15 @@ fancybox: true
 #favicon: /favicon.png
 
 # Comments
+## Disqus
 disqus_shortname:
+## Gitment
+gitment:
+  github_user:
+  github_repo:
+  client_id:
+  client_secret:
+
 
 # Site analytics
 google_analytics:
