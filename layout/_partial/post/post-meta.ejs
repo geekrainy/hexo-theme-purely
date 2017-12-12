@@ -1,8 +1,3 @@
-<% if (is_post()) { %>
-  <%
-    var post = page
-  %>
-<% } %>
 <ul class="post-meta">
   <li><i class="fa fa-user"></i> <%= __('meta.author') %> <%= config.author %></li>
   <li><i class="fa fa-calendar"></i> <%= __('meta.date') %> <%= date(post.date, 'MMM D') %></li>

@@ -1,13 +1,13 @@
-<%
-const gitment = new Gitment({
-  id: window.location.pathname, // optional
-  owner: <%= theme.gitment.github_user %>,
-  repo: <%= theme.gitment.github_repo %>,
-  oauth: {
-    client_id: <%= theme.gitment.client_id %>,
-    client_secret: <%= theme.gitment.client_secret %>,
-  }
-})
+<script>
+  const gitment = new Gitment({
+    id: window.location.pathname, // optional
+    owner: <%= theme.gitment.github_user %>,
+    repo: <%= theme.gitment.github_repo %>,
+    oauth: {
+      client_id: <%= theme.gitment.client_id %>,
+      client_secret: <%= theme.gitment.client_secret %>
+    }
+  })
 
-gitment.render('comments')
-%>
+  gitment.render('comments')
+</script>
