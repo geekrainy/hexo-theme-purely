@@ -59,10 +59,30 @@ body {
 	box-sizing: border-box;
 	background: $white;
 	overflow: hidden;
+
+	+mobile() {
+		width: auto;
+		margin: 0;
+		border-top: 2px solid $line-light;
+	}
+
+	+tablet() {
+		width: auto;
+		margin: 0;
+		border-top: 2px solid $line-light;
+	}
 }
 
 #main {
 	padding: 50px 50px 0;
+
+	+mobile() {
+		padding: 20px 20px 0;
+	}
+
+	+tablet() {
+		padding: 20px 20px 0;
+	}
 }
 
 .pagination {

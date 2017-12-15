@@ -1,6 +1,14 @@
 #header {
 	padding: 50px 50px 0;
 	text-shadow: 1px 1px 5px $shadow-color;
+
+  +mobile() {
+    padding: 20px 20px 0;
+  }
+
+  +tablet() {
+    padding: 20px 20px 0;
+  }
 }
 
 
@@ -17,6 +25,16 @@
 	line-height: 28px;
 	display: inline-block;
   margin-left: 50px;
+
+  +mobile() {
+    display: block;
+    margin-left: 0;
+  }
+  
+  +tablet() {
+    display: block;
+    margin-left: 0;
+  }
 }
 
 
@@ -27,6 +45,14 @@
 	padding-top: 50px;
 	border-bottom: 1px solid $line-dark;
 	float: left;
+
+  +mobile() {
+    padding-top: 10px;
+  }
+  
+  +tablet() {
+    padding-top: 10px;
+  }
 
 
   ul, li {
