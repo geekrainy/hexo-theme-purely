@@ -1,0 +1,20 @@
+title:
+  archive: 歸檔
+  category: 分類
+  tag: 標籤
+
+meta:
+  author: 博主
+  date: 日期
+  categories: 分类
+  tags: 标签
+  no_categories: 未分類
+
+menu:
+  home: 主頁
+  archives: 歸檔
+  categories: 分類
+  tags: 標籤
+  about: 關於
+  search: 檢索
+  sitemap: 站點地圖
