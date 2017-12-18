@@ -110,6 +110,10 @@ body {
 		line-height: 50px;
 		padding: 0 20px;
 		margin-right: 10px;
+
+		+mobile() {
+			margin-right: 0;
+		}
 	}
 
 	a {
@@ -123,6 +127,10 @@ body {
 			position: relative;
 			top: -1px;
 			border-top: 1px solid $line-light;
+		}
+
+		+mobile() {
+			margin-right: 0;
 		}
 	}
 }

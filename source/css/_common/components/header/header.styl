@@ -47,7 +47,9 @@
 	float: left;
 
   +mobile() {
+    height: auto;
     padding-top: 10px;
+    border-bottom: none;
   }
   
   +tablet() {
@@ -60,6 +62,10 @@
     float: left;
     margin: 0;
     padding: 0;
+
+    +mobile() {
+      float: none;
+    }
   }
 
 
@@ -77,6 +83,18 @@
 
     &:hover {
       border-bottom: 1px solid $line-light;
+    }
+
+    +mobile() {
+      display: block;
+      padding: 0 20px;
+      margin-right: 0;
+      background: $gray-100;
+      border-bottom: 2px solid $gray-50;
+
+      &:hover {
+        border-bottom-color: $gray-50;
+      }
     }
   }
 
@@ -102,6 +120,10 @@
       padding: 0 10px;
       width: 150px;
     }
+  }
+
+  +mobile() {
+    display: none;
   }
 
 }
